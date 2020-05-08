@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Landing page for natours",
   "main": "main.js",
-  "scripts": {    
+  "scripts": {
     "compile:sass": "node-sass sass/styles.sass css/styles2.css -w"
   },
   "author": "Me",
