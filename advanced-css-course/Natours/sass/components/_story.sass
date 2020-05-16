@@ -21,6 +21,8 @@
         transform: translateX(-3rem) skewX(12deg)
         position: relative
         overflow: hidden
+        +responsive(phone)
+            transform: translateX(-3rem) skewX(0)
     &__img
         height: 100%
         transform: translateX(-4rem) scale(1.4)
@@ -28,6 +30,8 @@
         transition: all .5s
     &__text
         transform: skewX(12deg)
+        +responsive(phone)
+            transform: skewX(0)
 
     &__caption
         position: absolute
@@ -47,6 +51,10 @@
     &:hover &__img
         transform: translateX(-4rem) scale(1)
         filter: blur(2px) brightness(80%)
-
-    
+    +responsive(tab-port)
+        width: 100%
+        padding: 4rem
+        padding-left: 7rem
+    +responsive(phone)
+        transform: skewX(0)
         

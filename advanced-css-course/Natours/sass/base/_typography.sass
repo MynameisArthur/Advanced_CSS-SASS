@@ -27,13 +27,18 @@ a
         font-weight: 400
         letter-spacing: 3.5rem
         animation: moveInLeft 1s ease-out             
+        +responsive(phone)
+          letter-spacing: 1rem
+          font-size: 5rem
     &--sub
         display: block
         font-size: 2rem
         font-weight: 700
         letter-spacing: 1.75rem
         animation: moveInRight 1s ease-out
-      
+        +responsive(phone)
+          letter-spacing: 0.5rem
+          
 .heading-secondary
     font-size: 3.5rem
     text-transform: uppercase
@@ -48,6 +53,11 @@ a
     &:hover
       transform: skewY(2deg) skewX(15deg) scale(1.1)
       text-shadow: .5rem 1rem 2rem rgba(#000,.2)
+    +responsive(tab-port)
+      font-size: 3rem
+    +responsive(phone)
+      font-size: 2.5rem
+      padding: 0 2rem
 
 .heading-tertiary
   font-size: $default-font-size
