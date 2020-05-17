@@ -21,9 +21,12 @@
         +responsive(tab-port)  
             width: 100%
             text-align: center
+            
     
     &__item
         display: inline-block
+        +responsive(tab-port)
+            margin-right: 0.2rem            
         &:not(:last-child)
             margin-right: 1.5rem
     &__link
@@ -33,6 +36,8 @@
             text-transform: uppercase
             display: inline-block
             transition: all .2s
+            +responsive(tab-port)
+            font-size: 1.2rem
         &:hover,&:active
             color: $color-primary
             box-shadow: 0 1rem 2rem rgba(#000,.4)
