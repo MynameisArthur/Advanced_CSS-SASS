@@ -43,15 +43,20 @@
 .user-nav
     display: flex
     align-items: center
-    align-self: stretch
+    align-self: stretch 
+    position: relative    
+    z-index: 1
     & > *
         padding: 0 2rem
         cursor: pointer
         height: 100%
         display: flex
         align-items: center
+        background-color: #fff
         &:hover
             background-color: var(--color-grey-light-2)
+    &__user
+        
     &__icon-box        
         position: relative
     &__icon
@@ -378,6 +383,46 @@
         outline: none
         animation: pulsate 1s infinite
     
+.user-nav__menu,
+.user-nav__message    
+    &-list
+        position: absolute    
+        z-index: -1        
+        left: 1px
+        width: 100%        
+        background-color: #ffffff
+        display: flex
+        flex-direction: column
+        justify-content: space-between        
+        border-top: var(--line)
+        padding-bottom: 0.5rem
+        overflow: hidden
+        transform-origin: top       
+        transition: transform 0.3s
+    &-item
+        padding: 1rem
+        flex: 1 
+        display: flex
+        align-items: center
+        &:hover
+            background-color: var(--color-grey-light-3)
+        a
+            color: var(--grey-dark-2)
+            display: block
+            width: 100%
+    .user-nav__notification
+        top: -0.5rem
+        right: -0.8rem
+.user-nav__menu-list
+    height: 13rem
+    bottom: -13rem
+    transform: translateY(-13rem)
+.user-nav__message-list
+    height: 18rem
+    bottom: -18rem
+    transform: translateY(-18rem)
 
-        
-
+.user-nav__user:hover .user-nav__menu-list    
+    transform: translateY(0)
+.user-nav__message:hover .user-nav__message-list    
+    transform: translateY(0)
